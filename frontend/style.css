@@ -120,15 +120,16 @@ body{
     /* position: absolute;
     top: 0;
     left: 35px; */
-    
-    font-size: 16px;
-    overflow-wrap: break-word;
+
+    display: flex;
+    position: relative;
 
     max-width: 480px;
     width: calc(100vw - 40px);
     height: fit-content;
-    /* display: flex; */
-    /* height: 25px; */
+    
+    font-size: 16px;
+    overflow-wrap: break-word;
 }
 
 #root #feedback-form .data-privacy label a{
