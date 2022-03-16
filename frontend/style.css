@@ -1,7 +1,5 @@
 body{
     background-color: #f7e4d4;
-    font-family: 'EB Garamond', serif;
-    font-weight: 400;
     color: #467745;
 }
 
@@ -17,6 +15,8 @@ body{
 }
 
 #root h1{
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
     font-size: 48px;
 }
 
@@ -30,13 +30,9 @@ body{
     justify-content: center;
     gap: 20px;
     
-    color: yellow;
-}
-
-#root #feedback-form:nth-child(n){
+    color: #467745;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    color: red;
 }
 
 #root #feedback-form input.subject{
@@ -46,11 +42,10 @@ body{
 
     padding: 20px;
 
+    color: #467745;
     font-size: 16px;
     background-color: #ffffff;
 
-    /* color: #467745; */
-    color: blue;
 }
 
 #root #feedback-form textarea{
@@ -62,9 +57,14 @@ body{
 
     padding: 20px;
 
-    /* color: #467745; */
-    color: blue;
+    color: #467745;
     font-size: 16px;
+}
+
+::placeholder{
+    color: #467745;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 #root #feedback-form div.data-privacy{
@@ -74,36 +74,48 @@ body{
     display: flex;
 }
 
-#root #feedback-form .data-privacy:nth-child(n){
-    flex-grow: 0;
-}
-
 #root #feedback-form .data-privacy input.data-privacy-chbox{
     height: 16px;
     width: 16px;
+
+    flex-grow: 0;
 
     border-radius: 0;
 }
 
 #root #feedback-form .data-privacy label{
     flex-grow: 1;
-    overflow-wrap: break-word;
 
     margin-left: 10px;
     
     font-size: 16px;
-    color: #467745;
+    overflow-wrap: break-word;
 }
 
 #root #feedback-form .data-privacy label a{
     text-decoration: underline;
 }
 
-::placeholder{
-    /* color: #467745; */
-    color: blue;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+#root #feedback-form div.data-privacy{
+    max-width: 480px;
+    width: calc(100vw - 40px);
+    height: max-content;
+    display: flex;
+}
+
+#root #feedback-form button.submit{
+    background-color: #467745;
+    width: 280px;
+    height: 80px;
+
+    border-radius: 40px;
+
+    text-transform: uppercase;
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 21px;
+    color:#f7e4d4;
+    letter-spacing: 0.2em;
 }
 
 @media only screen and (max-width: 520px) {
@@ -125,10 +137,6 @@ body{
 
     #root #feedback-form div.data-privacy-chbox{
         width: calc(100vw - 40px);
-    }
-    
-    #root #feedback-form input.data-privacy-chbox{
-        border: none;
     }
     
     #root #feedback-form label{
