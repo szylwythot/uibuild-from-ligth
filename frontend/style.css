@@ -1,3 +1,137 @@
 body{
     background-color: #f7e4d4;
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    color: #467745;
+}
+
+#root{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#root h1{
+    font-size: 48px;
+}
+
+#root #feedback-form{
+    /* width: 100vw;
+    height: 100vh; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    color: yellow;
+}
+
+#root #feedback-form:nth-child(n){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: red;
+}
+
+#root #feedback-form input.subject{
+    width: calc(100vw - 40px);
+    height: 60px;
+    max-width: 480px;
+
+    padding: 20px;
+
+    font-size: 16px;
+    background-color: #ffffff;
+
+    /* color: #467745; */
+    color: blue;
+}
+
+#root #feedback-form textarea{
+    width: calc(100vw - 40px);
+    height: 120px;
+    max-width: 480px;
+    
+    background-color: #ffffff;
+
+    padding: 20px;
+
+    /* color: #467745; */
+    color: blue;
+    font-size: 16px;
+}
+
+#root #feedback-form div.data-privacy{
+    max-width: 480px;
+    width: calc(100vw - 40px);
+    height: max-content;
+    display: flex;
+}
+
+#root #feedback-form .data-privacy:nth-child(n){
+    flex-grow: 0;
+}
+
+#root #feedback-form .data-privacy input.data-privacy-chbox{
+    height: 16px;
+    width: 16px;
+
+    border-radius: 0;
+}
+
+#root #feedback-form .data-privacy label{
+    flex-grow: 1;
+    overflow-wrap: break-word;
+
+    margin-left: 10px;
+    
+    font-size: 16px;
+    color: #467745;
+}
+
+#root #feedback-form .data-privacy label a{
+    text-decoration: underline;
+}
+
+::placeholder{
+    /* color: #467745; */
+    color: blue;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 520px) {
+    h1{
+        align-self: flex-start;
+
+        margin-left: 20px;
+
+        font-size: 36px;
+    }
+
+    input .subject{
+        width: calc(100vw - 40px);
+    }
+
+    textarea{
+        width: calc(100vw - 40px);
+    }
+
+    #root #feedback-form div.data-privacy-chbox{
+        width: calc(100vw - 40px);
+    }
+    
+    #root #feedback-form input.data-privacy-chbox{
+        border: none;
+    }
+    
+    #root #feedback-form label{
+        overflow-wrap: break-word;
+    }
 }
