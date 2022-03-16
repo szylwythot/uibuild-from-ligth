@@ -20,10 +20,18 @@
         <form action="" id="feedback-form">
             <input type="text" placeholder="Tárgy" class="subject">
             <textarea name="comment" id="" cols="30" rows="10" placeholder="Megjegyzés" class="comment"></textarea>
-            <div class="data-privacy">
-                <input type="checkbox" name="data-privacy" class="data-privacy-chbox">
+            <label class="data-privacy">
+                Elolvastam és elfogadom az <a href="">Adatkezelési Tájékoztatót</a>.
+                <input type="checkbox" name="data-privacy" class="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <!-- <div class="data-privacy">
+                <div class="chbox-container">
+                    <input type="checkbox" name="data-privacy" class="checkbox">
+                    <span class="checkmark"></span>
+                </div>
                 <label for="data-privacy">Elolvastam és elfogadom az <a href="">Adatkezelési Tájékoztatót</a>.</label>
-            </div>
+            </div> -->
             <button type="submit" form="feedback-form" value="Submit" class="submit">mentés</button>
         </form>
         <!-- nice to have  -->

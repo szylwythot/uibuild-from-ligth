@@ -67,26 +67,39 @@ body{
     font-weight: 500;
 }
 
-#root #feedback-form div.data-privacy{
+/* #root #feedback-form div.data-privacy{
+    display: inline-flex;
     max-width: 480px;
     width: calc(100vw - 40px);
-    height: max-content;
-    display: flex;
+    height: 25px;
 }
 
-#root #feedback-form .data-privacy input.data-privacy-chbox{
-    height: 16px;
-    width: 16px;
+#root #feedback-form div.data-privacy .chbox-container{
+    position: absolute;
+    height: 25px;
+}
 
-    flex-grow: 0;
+#root #feedback-form .data-privacy .chbox-container input.checkbox{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
 
-    border-radius: 0;
+#root #feedback-form .data-privacy .chbox-container span.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ffffff;
 }
 
 #root #feedback-form .data-privacy label{
-    flex-grow: 1;
-
-    margin-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 35px;
     
     font-size: 16px;
     overflow-wrap: break-word;
@@ -101,6 +114,42 @@ body{
     width: calc(100vw - 40px);
     height: max-content;
     display: flex;
+} */
+
+#root #feedback-form label.data-privacy{
+    /* position: absolute;
+    top: 0;
+    left: 35px; */
+    
+    font-size: 16px;
+    overflow-wrap: break-word;
+
+    max-width: 480px;
+    width: calc(100vw - 40px);
+    height: fit-content;
+    /* display: flex; */
+    /* height: 25px; */
+}
+
+#root #feedback-form .data-privacy label a{
+    text-decoration: underline;
+}
+#root #feedback-form label.data-privacy input.checkbox{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+#root #feedback-form label.data-privacy span.checkmark{
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    height: 25px;
+    width: 25px;
+    background-color: #ffffff;
+    z-index: 99;
 }
 
 #root #feedback-form button.submit{
